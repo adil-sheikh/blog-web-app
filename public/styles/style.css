@@ -1,0 +1,63 @@
+body {
+    background-color: #E09CEB;
+}
+
+h1, h2, label {
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.title {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#title {
+    height: 40px;
+    width: 25%;
+    border: none;
+    resize: none;
+}
+
+#content {
+    height: 100px;
+    width: 50%;
+    border: none;
+    resize: none;
+}
+
+.edit, .delete {
+    display: inline;
+}
+
+button {
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    border: double;
+    background-color: whitesmoke;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.post {
+    border: solid 2px;
+    height: 400px;
+    flex-basis: 30%;
+    padding: 0 10px;
+    text-align: justify;
+}
+
+.content {
+    height: 275px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+}

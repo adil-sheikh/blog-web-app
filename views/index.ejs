@@ -1,0 +1,46 @@
+<%- include("partials/header.ejs") %>
+
+<div class="post-create-edit">
+    <% if(locals.index) { %>
+        <h2>Edit Post</h2>
+        <form action="/editPost" method="POST">
+            <label for="title">Title</label><br>
+            <textarea id="title" name="title" maxlength="40" required><%= title[index] %></textarea><br>
+            <label for="content">Content</label><br>
+            <textarea type="text" id="content" name="content" maxlength="1000" required><%= content[index] %></textarea><br>
+            <button type="submit" name="index" value="<%= index %>">Submit</button>
+            <button type="submit" formaction="/" formmethod="GET">Cancel</button>
+        </form>
+    <% } else { %>
+        <h2>New Post</h2>
+        <form action="/submit" method="POST">
+            <label for="title">Title</label><br>
+            <textarea id="title" name="title" maxlength="40" required></textarea><br>
+            <label for="content">Content</label><br>
+            <textarea id="content" name="content" maxlength="1000" required></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+    <% } %>
+</div>
+
+<h2>Your Posts</h2>
+<div class="container">
+    <% if(locals.title && title.length > 0) { %>
+        <% for(let i = 0; i < title.length; i++) { %>
+            <div class="post">
+                <h3><%= title[i] %></h3>
+                <p class="content"><%= content[i] %></p>
+                <form class="edit" action="/edit" method="POST">
+                    <button type="submit" name="index" value="<%= i %>">Edit</button>
+                </form>
+                <form class="delete" action="/delete" method="POST">
+                    <button type="submit" name="index" value="<%= i %>">Delete</button>
+                </form>
+            </div>
+        <% } %>
+    <% } else { %>
+        <h3>OOPS! No posts found!</h3>
+    <% } %>
+</div>
+
+<%- include("partials/footer.ejs") %>
