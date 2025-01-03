@@ -6,7 +6,7 @@ A simple website which allows users to create a post and ability to view all pos
 
 About:
 
-BlogMaker is primarily made using express.js with node.js. All the posts are stored in an array-like structure in the backend which are rendered in the frontend using flexbox. Express is used for the server setup and routing. With simple design using CSS styling, it is a static website made using HTML. It currently does not have a database support, so all the posts will be reset when server is restarted.
+BlogMaker is primarily made using express.js with node.js. All the posts are stored in an array-like structure in the backend which are rendered in the frontend using flexbox. Express is used for the server setup and routing. With simple design using CSS styling, it is a dynamic website made using EJS. It currently does not have a database support, so all the posts will be reset when server is restarted.
 
 How to use:
 
